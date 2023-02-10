@@ -25,3 +25,12 @@
 #container a {
   text-decoration: none;
 }
+
+ion-content{
+  --ion-font-family: 'Courier New', Courier, monospace;
+  --ion-background-color:yellow;
+}
+
+ion-header{
+  --ion-background-color: #1ddd33;
+}
