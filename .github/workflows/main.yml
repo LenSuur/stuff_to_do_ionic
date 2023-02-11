@@ -20,8 +20,8 @@ jobs:
         with:
           node-version: 13.x
 
-      - name: Install Cordova
-        run: npm install -g cordova
+      - name: Install Capacitor
+        run: npm install -g @capacitor/cli
 
       - name: Install Ionic
         run: npm install -g @ionic/cli
@@ -30,13 +30,13 @@ jobs:
         run: npm install
 
       - name: Add Android platform
-        run: ionic cordova platform add android@latest
+        run: ionic cap platform add android@latest
 
       - name: Build Android Dev APK
-        run: ionic cordova build android
+        run: ionic cap build android
 
       - name: Build Android Release APK
-        run: ionic cordova build android --release --prod
+        run: ionic cap build android --release --prod
 
       - name: Generate the Android App Bundle
         working-directory: ./platforms/android/
