@@ -32,14 +32,11 @@ jobs:
       - name: Add Android platform
         run: ionic cap platform add android@latest
 
-      - name: Build Android Dev APK
-        run: ionic cap build android
-
       - name: Build Android Release APK
         run: ionic cap build android --release --prod
 
       - name: Generate the Android App Bundle
-        working-directory: ./platforms/android/
+        working-directory: ./android/
         run: ./gradlew bundle
 
       - name: Upload dev APK
