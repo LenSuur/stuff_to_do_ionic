@@ -38,6 +38,10 @@ jobs:
       - name: Build Android Release APK
         run: ionic cap build android --no-open --release --prod
 
+      - name: Run chmod to make gradlew executable
+        working-directory: ./android/
+        run: chmod +x ./gradlew
+
       - name: Generate the Android App Bundle
         working-directory: ./android/
         run: ./gradlew bundle
