@@ -33,7 +33,7 @@ jobs:
         run: ionic cap platform add android@latest
 
       - name: Build Android Release APK
-        run: ionic cap build android --release --prod
+        run: ionic cap build android --no-open --release --prod
 
       - name: Generate the Android App Bundle
         working-directory: ./android/
@@ -43,4 +43,4 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: app-dev
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          path: ./android/app/build/outputs/apk/debug/app-debug.apk
