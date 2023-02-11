@@ -1,10 +1,9 @@
 name: Build Android
 
-on:
-  push:
-    tags:
-    - '*'
+on: push
+  
 jobs:
+  release:
   build:
     name: Build APK
     runs-on: ubuntu-latest
